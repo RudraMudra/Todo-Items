@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- bootstrap css -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <!-- main css -->
+ <link rel="stylesheet" href="css/main.css">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+ <!-- font awesome -->
+ <link rel="stylesheet" href="css/all.css">
+ <title>ToDo List</title>
+ <style>
+ </style>
+</head>
+
+<body>
+ <div class="container">
+  <div class="row">
+   <div class="col mx-auto col-md-8 mt-3 text-center">
+    <div class="alert text-capitalize feedback">
+     write value for item
+    </div>
+    <!-- form -->
+    <form id="itemForm" class="my-3">
+     <h3 class="text-capitalize mb-4" 
+     style="text-decoration: underline; color: red;
+     font-size: 40px;">to do list</h3>
+     <div class="input-group">
+        <form action="/action_page.php">
+
+            <label for="name">Name:&nbsp;</label>
+            <br>
+            <input type="text" id="itemInput">
+            <br>
+            <label for="Status">&nbsp;Status:&nbsp;</label>
+            <br>
+            <select name="role" id="itemStatus">
+                <option value=""></option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <br>
+            <label for="" id="Itempriority">&nbsp;&nbsp;Priority: 
+                <input type="radio" name ="itemPriority" id = "itemPriority" value="High">High
+                <input type="radio" name ="itemPriority" id = "itemPriority" value="Low" >Low
+            </label>
+            <!-- <input type="submit" value="Submit"> -->
+            <div class="wrapper">
+                <label for="MyInput" id="ItemCheckbox">Activity_Type: 
+                    <input type="checkbox"  name="aType" id="CheckBox" value="Business">Business
+                    <input type="checkbox"  name="aType" id="CheckBox" value="Professional">Professional
+                    <input type="checkbox"  name="aType" id="CheckBox" value="Commercial">Commercial
+                </label>
+            </div>
+          </form> 
+      <!-- <input type="text" class="form-control text-capitalize" id="itemInput" placeholder="name..."> -->
+      <div class="input-group-append">
+       <button class="btn btn-green text-capitalize" type="submit">add item</button>
+      </div>
+     </div>
+    </form>
+    <div class="item-container">
+     <!-- end of form  -->
+     <div class="item-list my-5">
+     </div>
+     <button type="button" class="btn btn-red my-3 text-capitalize" id="clear-list">clear items</button>
+    </div>
+   </div>
+  </div>
+ </div>
+
+
+
+
+ <!-- jquery -->
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <!-- bootstrap js -->
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <!-- script js -->
+ <script src="js/app.js"></script>
+</body>
+
+</html>
